@@ -1,0 +1,117 @@
+#SemesterOverview {
+    background-color: ghostwhite;
+}
+
+#SemsterOverviewHolder {
+    min-height: 95%;
+    min-width: 95%;
+    width: 95%;
+    height: 95%;
+    max-height: 95%;
+    max-width: 95%;
+    flex-direction: row;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.gridColumn {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+}
+
+.gridColumnInner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-grow: 15;
+    flex-shrink: 15;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gridCellHolder {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    color: #2C3E50;
+}
+
+.gridCell {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    -webkit-flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    color: #2C3E50;
+    border-color: #2C3E50;
+    max-height: 100%;
+}
+
+.hiddenClass {
+    display: none;
+}
+
+.YearTitle {
+    flex-grow: 0.1;
+    flex-shrink: 0.1;
+}
+
+.completeSemster {
+    background-color: rgba(112, 204, 255, 0.67);
+}
+
+.ongoingSemster {
+    background-color: rgba(0, 255, 0, 0.33);
+}
+
+.futureSemester {
+    background-color: rgba(112, 204, 255, 0.33);
+}

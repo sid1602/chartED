@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.1/jquery.fullPage.min.css">
+
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/SemesterOverview.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.1/jquery.fullPage.min.js"></script>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/YearsSystem/Year.js"></script>
+
+</head>
+
+<body id="fullpage">
+    <div id="renderToolbar">
+        <div id="leftDirection">
+            <button class="hamburger">&#9776;</button>
+            <div>&nbsp;GPA&nbsp;&nbsp;</div>
+            <div>&nbsp;&nbsp;Courses&nbsp;</div>
+        </div>
+        <div id="Title">
+
+        </div>
+        <div id="rightDirection">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="slide" id="SemesterOverview">
+            <div class="displayHolder">
+                <div class="flexboxContainer">
+                    <div id="SemsterOverviewHolder">
+                        <div class="gridColumn" id="Y1">
+                            <div class="YearTitle">Year 1</div>
+                            <div class="gridColumnInner">
+                                <div class="gridCellHolder completeSemster" id="Y1Fall">
+                                    <div> Semester: Fall</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder completeSemster" id="Y1Spring">
+                                    <div> Semester: Spring</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder completeSemster hiddenClass" id="Y1Summer">
+                                    <div> Semester: Summer</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder" id="Y1plus">
+                                    <div> + </div>
+                                </div>
+                            </div>
+                            <!--<div class="YearTitle" id="Y1Plus"><i class="fa fa-plus"></i> </div>-->
+                        </div>
+                        <div class="gridColumn" id="Y2">
+                            <div class="YearTitle">Year 2</div>
+                            <div class="gridColumnInner">
+                                <div class="gridCellHolder completeSemster" id="Y2Fall">
+                                    <div> Semester: Fall</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder ongoingSemster" id="Y2Spring">
+                                    <div> Semester: Spring</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder futureSemster hiddenClass" id="Y2Summer">
+                                    <div> Semester: Summer</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder" id="Y2plus">
+                                    <div> + </div>
+                                </div>
+                            </div>
+                            <!--<div class="YearTitle" id="Y2Plus"><i class="fa fa-plus"></i> </div>-->
+                        </div>
+                        <div class="gridColumn" id="Y3">
+                            <div class="YearTitle">Year 3</div>
+                            <div class="gridColumnInner">
+                                <div class="gridCellHolder futureSemester" id="Y3Fall">
+                                    <div> Semester: Fall</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder futureSemester" id="Y3Spring">
+                                    <div> Semester: Spring</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder futureSemester hiddenClass" id="Y3Summer">
+                                    <div> Semester: Summer</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder" id="Y3plus">
+                                    <div> + </div>
+                                </div>
+                            </div>
+                            <!--<div class="YearTitle" id="Y3Plus"><i class="fa fa-plus"></i> </div>-->
+                        </div>
+                        <div class="gridColumn" id="Y4">
+                            <div class="YearTitle">Year 4</div>
+                            <div class="gridColumnInner">
+                                <div class="gridCellHolder futureSemester" id="Y4Fall">
+                                    <div> Semester: Fall</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder futureSemester" id="Y4Spring">
+                                    <div> Semester: Spring</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder futureSemester hiddenClass" id="Y4Summer">
+                                    <div> Semester: Summer</div>
+                                    <div> Credit Hours: </div>
+                                    <div> GPA: </div>
+                                </div>
+                                <div class="gridCellHolder" id="Y4plus">
+                                    <div> + </div>
+                                </div>                               
+                            </div>
+                            <!--<div class="YearTitle" id="Y4Plus"><i class="fa fa-plus"></i> </div>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="AcademicProgress">
+            <div class="displayHolder">
+                <div class="flexboxContainer">
+                    <div class="temp">
+                        Academic Progress.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="GPAPage">
+            <div class="displayHolder">
+                <div class="flexboxContainer">
+                    <div class="temp">
+                        GPA Page.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="focusRemover">
+    </div>
+
+    <div id="informationDisplayWrapper">
+        <div id="informationDisplay">
+            <div class="flexboxContainer">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
