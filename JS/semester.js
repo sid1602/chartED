@@ -11,18 +11,32 @@ $(document).ready(function () {
 
 
 function keyboardInputHandler(event) {
-    if (event.which == 65) {
+    if (event.which == 79) {
         $("#Class6").removeClass("hiddenClass");
         $("#Class6plus").addClass("hiddenClass");
         //  displaySemsterBlock(true);
     }
 
-    if (event.which == 83) {
+    if (event.which == 80) {
         $("#Class6").addClass("hiddenClass");
         $("#Class6plus").removeClass("hiddenClass");
         //  displaySemsterBlock(false);
     }
 
+    if (event.which == 65) {
+        $("#CourseEdit").removeClass("hiddenClass");
+        var elem = document.getElementById('BGBlur');
+        elem.style.WebkitFilter = "blur(10px)";
+        elem.style.filter = "blur(10px)";
+        //  displaySemsterBlock(true);
+    }
+
+    if (event.which == 83) {
+        $("#CourseEdit").addClass("hiddenClass");
+        var elem = document.getElementById('BGBlur');
+        elem.style.WebkitFilter = "initial";
+        elem.style.filter = "initial";
+    }
 }
 
 function displayFocusRemover(toggle) {
