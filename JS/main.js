@@ -1,3 +1,4 @@
+var semesterSystem = null;
 $(document).ready(function () {
     // Set up the fullpage.js
     //  Set the scrollbar to be shown.
@@ -9,6 +10,11 @@ $(document).ready(function () {
     $(document).keydown(keyboardInputHandler);
 });
 
+$(window).load(function () {
+
+    semesterSystem = new SemesterSystem();
+    semesterSystem.setUpSemesterSystem();
+});
 
 function keyboardInputHandler(event) {
     if (event.which == 65) {

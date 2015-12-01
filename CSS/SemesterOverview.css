@@ -70,6 +70,8 @@
     border-width: 1px;
     border-style: solid;
     color: #2C3E50;
+    min-height: 30%;
+    max-height: 30%;
 }
 
 .gridCell {
