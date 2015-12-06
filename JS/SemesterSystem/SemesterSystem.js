@@ -114,13 +114,15 @@ SemesterSystem.prototype.setUpSemesterSystem = function () {
     for (var i = 0; i < this.semesters.length; i++) {
         this.semesters[i].associatedCell = $("#" + this.semesters[i].givenID);
     }
-    this.fillInSemesterSystem();
 
     // Course Example
-    //    var course = new Course();
-    //    course.course_title = "CS 101";
-    //    this.addCourseToSemester(course, "Y1Spring");
-    //    this.moveCourseBetweenSemesters("CS 101", "Y1Spring", "Y1Fall");
+    var course = new Course();
+    course.course_title = "CS 101";
+    course.user_grade = 4;
+    course.user_course_hours = 3;
+    this.addCourseToSemester(course, "Y1Spring");
+    this.moveCourseBetweenSemesters("CS 101", "Y1Spring", "Y1Fall");
+    this.fillInSemesterSystem();
 
 };
 
@@ -132,6 +134,7 @@ SemesterSystem.prototype.fillInSemesterSystem = function () {
 
 SemesterSystem.prototype.fillInSemster = function (givenSemesterArrayPosition) {
 
+    console.log(this.semesters[givenSemesterArrayPosition].courseList);
     this.semesters[givenSemesterArrayPosition].fillInSemster();
     this.semesters[givenSemesterArrayPosition].setSemsterStatus("Incomplete");
 };

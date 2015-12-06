@@ -21,7 +21,7 @@ AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
     console.log(fulfilledRequirements1);
     console.log(this.requirements1);
 
-    if (fulfilledRequirements1.length == this.requirements1.length && this.requirements1.length != 0) {
+    if (fulfilledRequirements1.length == this.requirements1.length && this.requirements1.length == 0) {
         $("#BCR").html("Complete - <i class= \"fa fa-check\"></i>");
         $("#BCR").removeClass("IncompleteRequirement");
         $("#BCR").addClass("CompletedRequirement");
@@ -35,7 +35,7 @@ AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
     var techElectiveCount = 0;
     for (var i = 0; i < this.semesterSystem.semesters.length; i++) {
         for (var j = 0; j < this.semesterSystem.semesters[i].courseList.length; j++) {
-            if (this.semesterSystem.semesters[i].courseList[i].isTechElective) {
+            if (this.semesterSystem.semesters[i].courseList[j].isTechElective) {
                 techElectiveCount++;
 
             }

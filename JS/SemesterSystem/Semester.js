@@ -24,11 +24,12 @@ Semster.prototype.computeCHGPA = function () {
 
 
 Semster.prototype.addCourse = function (givenCourse) {
-    console.log(givenCourse);
     this.courseList.push(givenCourse);
+    console.log(givenCourse);
     console.log(this.courseList);
     this.computeCHGPA();
 
+    console.log(this.GPA);
 };
 
 Semster.prototype.removeCourse = function (givenCourseName) {
