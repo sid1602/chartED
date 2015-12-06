@@ -1,6 +1,7 @@
 function Course() {
 
     this.course_title = "";
+    this.course_id = "";
     this.default_credit_hours = 0;
     this.user_course_hours = 0;
     this.user_grade = 0;
@@ -32,4 +33,13 @@ Course.prototype.set_professor_name = function (givenProfessorName) {
 
 Course.prototype.notes = function (givenNotes) {
     this.notes = givenNotes;
+};
+
+Course.prototype.fillInCourseInfo = function () {
+
+    this.associatedCell.html("<div> " + this.course_title + " </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Credit Hours : " + this.default_credit_hours + " </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Grade : " + this.user_grade + "  </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Professor : " + this.professor_name + "  </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Course Type : " + this.course_type + "  </div>");
 };

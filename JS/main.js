@@ -17,17 +17,19 @@ $(window).load(function () {
     semesterSystem.setUpAcademicProgressRequirements();
 });
 
-function keyboardInputHandler(event) {
-    if (event.which == 65) {
-        $("#Y1Summer").removeClass("hiddenClass");
-        $("#Y1plus").addClass("hiddenClass");
-    }
+function GotoSemster(clicked_id) {
+    var temp_id = semesterSystem.getSemesterArrayIDFromGivenID(clicked_id);
+    var temp_Sem = new Semster();
+    temp_Sem = semesterSystem.semesters[temp_id];
+    $('#DummyDiv').removeClass("hiddenClass");
 
-    if (event.which == 83) {
-        $("#Y1Summer").addClass("hiddenClass");
-        $("#Y1plus").removeClass("hiddenClass");
-    }
+    var temp_CourseSys = new CourseSystem(temp_Sem.courseList);
+    temp_CourseSys.setUpCourseSystem();
 
+}
+
+function closeButton() {
+    $('#DummyDiv').addClass('hiddenClass');
 }
 
 function displayFocusRemover(toggle) {

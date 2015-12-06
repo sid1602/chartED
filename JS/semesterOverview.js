@@ -6,11 +6,15 @@ $(document).ready(function () {
         paddingTop: $("#renderToolbar").height(),
         fixedElements: "#renderToolbar"
     });
-    $(document).keydown(keyboardInputHandler);
+
 });
 
 
-function keyboardInputHandler(event) {
+
+
+
+
+/*function keyboardInputHandler(event) {
     if (event.which == 79) {
         $("#Class6").removeClass("hiddenClass");
         $("#Class6plus").addClass("hiddenClass");
@@ -37,7 +41,7 @@ function keyboardInputHandler(event) {
         elem.style.WebkitFilter = "initial";
         elem.style.filter = "initial";
     }
-}
+}*/
 
 function displayFocusRemover(toggle) {
     console.log("Focus Toggle.");
