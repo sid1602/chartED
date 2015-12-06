@@ -4,19 +4,23 @@
 <head>
 
     <link href='http://fonts.googleapis.com/css?family=Lekton:400,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.1/jquery.fullPage.min.css">
 
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <link rel="stylesheet" type="text/css" href="CSS/SemesterOverview.css">
+    <link rel="stylesheet" type="text/css" href="CSS/SemesterOverviewLayout.css">
+    <link rel="stylesheet" type="text/css" href="CSS/AcademicProgressOverviewLayout.css">
+    <link rel="stylesheet" type="text/css" href="CSS/GPAManagerLayout.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.1/jquery.fullPage.min.js"></script>
 
     <script src="JS/main.js"></script>
+    <script src="JS/AcademicRequirementsSystem/AcademicRequirementsSystem.js"></script>
     <script src="JS/SemesterSystem/SemesterSystem.js"></script>
     <script src="JS/SemesterSystem/Semester.js"></script>
     <script src="JS/SemesterSystem/Course.js"></script>
@@ -24,16 +28,18 @@
 </head>
 
 <body id="fullpage">
-    <div id="renderToolbar">
-        <div id="leftDirection">
-            <button class="hamburger">&#9776;</button>
-            <div>&nbsp;GPA&nbsp;&nbsp;</div>
-            <div>&nbsp;&nbsp;Courses&nbsp;</div>
+    <div id="optionsToolbar">
+        <div id="CoursesButton">
+            Courses
         </div>
-        <div id="Title">
-
+        <div id="AcademicProgressButton">
+            Academic Progress
         </div>
-        <div id="rightDirection">
+        <div id="GPAButton">
+            GPA
+        </div>
+        <div id="MenuButton">
+            <i class="fa fa-bars"></i>
         </div>
     </div>
 
@@ -42,207 +48,139 @@
             <div class="displayHolder">
                 <div class="flexboxContainer">
                     <div id="SemsterOverviewHolder">
-                        <div class="gridColumn" id="Y1">
-                            <div class="YearTitle">Year 1</div>
-                            <div class="gridColumnInner">
-                                <div class="gridCellHolder completeSemster" id="Y1Fall">
-                                    <div> Semester: Fall 2014</div>
-                                    <!-- courses-->
-                                    <div> CHEM 102</div>
-                                    <div> CHEM 103</div>
-                                    <div> MATH 221</div>
-                                    <div> CS 100</div>
-                                    <div> CS 125</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                        <div class="YearColumn" id="Y1">
+                            <div class="YearHeader"> Year One</div>
+                            <div class="SemestersHolder">
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y1Fall">
                                     </div>
-                                    <div> Credit Hours: 14</div>
-                                    <div> Semester GPA: 3.75 </div>
                                 </div>
-                                <div class="gridCellHolder completeSemster" id="Y1Spring">
-                                    <div> Semester: Spring 2015</div>
-                                    <!-- courses-->
-                                    <div> PHYS 211</div>
-                                    <div> CS 173</div>
-                                    <div> MATH 231</div>
-                                    <div> CLCV 115</div>
-                                    <div> ENG 460</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y1Winter">
                                     </div>
-                                    <div> Credit Hours: 16</div>
-                                    <div> Semester GPA: 3.61 </div>
                                 </div>
-                                <div class="gridCellHolder completeSemster hiddenClass" id="Y1Summer">
-                                    <div> Semester: Summer 2015</div>
-                                    <!-- courses-->
-                                    <div> ECON 102</div>
-                                    <div> ANTH 103</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y1Spring">
                                     </div>
-                                    <div> Credit Hours: 6</div>
-                                    <div> Semester GPA: 4.00 </div>
                                 </div>
-                                <div class="gridCellHolder" id="Y1plus">
-                                    <div> + </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y1Summer">
+                                    </div>
                                 </div>
                             </div>
-                            <!--<div class="YearTitle" id="Y1Plus"><i class="fa fa-plus"></i> </div>-->
                         </div>
-                        <div class="gridColumn" id="Y2">
-                            <div class="YearTitle">Year 2</div>
-                            <div class="gridColumnInner">
-                                <div class="gridCellHolder completeSemster" id="Y2Fall">
-                                    <div> Semester: Fall 2015</div>
-                                    <!-- courses-->
-                                    <div> PHYS 212</div>
-                                    <div> CS 225</div>
-                                    <div> MATH 241</div>
-                                    <div> CS 233</div>
-                                    <div> HIND 405</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                        <div class="YearColumn" id="Y2">
+                            <div class="YearHeader"> Year Two</div>
+                            <div class="SemestersHolder">
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y2Fall">
                                     </div>
-                                    <div> Credit Hours: 16</div>
-                                    <div> Semester GPA: 3.21 </div>
                                 </div>
-                                <div class="gridCellHolder ongoingSemster" id="Y2Spring">
-                                    <div> Semester: Spring 2016</div>
-                                    <!-- courses-->
-                                    <div> PHYS 213</div>
-                                    <div> CS 241</div>
-                                    <div> MATH 415</div>
-                                    <div> ATMS 120</div>
-                                    <div> RLST 105</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y2Winter">
                                     </div>
-                                    <div> Credit Hours: 17</div>
-                                    <div> Predicted GPA: 3.42 </div>
                                 </div>
-                                <div class="gridCellHolder futureSemster hiddenClass" id="Y2Summer">
-                                    <div> Semester: Summer 2016</div>
-                                    <div> Credit Hours: </div>
-                                    <div> Predicted GPA: </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y2Spring">
+                                    </div>
                                 </div>
-                                <div class="gridCellHolder" id="Y2plus">
-                                    <div> + </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y2Summer">
+                                    </div>
                                 </div>
                             </div>
-                            <!--<div class="YearTitle" id="Y2Plus"><i class="fa fa-plus"></i> </div>-->
+
                         </div>
-                        <div class="gridColumn" id="Y3">
-                            <div class="YearTitle">Year 3</div>
-                            <div class="gridColumnInner">
-                                <div class="gridCellHolder futureSemester" id="Y3Fall">
-                                    <div> Semester: Fall 2016</div>
-                                    <!-- courses-->
-                                    <div> CS 210</div>
-                                    <div> CS 373</div>
-                                    <div> ANTH 108</div>
-                                    <div> CS 242</div>
-                                    <div>
-                                        <p>
-                                        </P>
+                        <div class="YearColumn" id="Y3">
+                            <div class="YearHeader"> Year Three</div>
+                            <div class="SemestersHolder">
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y3Fall">
                                     </div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y3Winter">
                                     </div>
-                                    <div> Credit Hours: 14</div>
-                                    <div> Predicted GPA: 3.15 </div>
                                 </div>
-                                <div class="gridCellHolder futureSemester" id="Y3Spring">
-                                    <div> Semester: Spring 2017</div>
-                                    <!-- courses-->
-                                    <div> CS 357</div>
-                                    <div> CS 411</div>
-                                    <div> MATH 461</div>
-                                    <div> CS 418</div>
-                                    <div> CS 461</div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y3Spring">
                                     </div>
-                                    <div> Credit Hours: 18</div>
-                                    <div> Predicted GPA: 2.80 </div>
                                 </div>
-                                <div class="gridCellHolder futureSemester hiddenClass" id="Y3Summer">
-                                    <div> Semester: Summer 2017</div>
-                                    <div> Credit Hours: </div>
-                                    <div> Predicted GPA: </div>
-                                </div>
-                                <div class="gridCellHolder" id="Y3plus">
-                                    <div> + </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y3Summer">
+                                    </div>
                                 </div>
                             </div>
-                            <!--<div class="YearTitle" id="Y3Plus"><i class="fa fa-plus"></i> </div>-->
+
                         </div>
-                        <div class="gridColumn" id="Y4">
-                            <div class="YearTitle">Year 4</div>
-                            <div class="gridColumnInner">
-                                <div class="gridCellHolder futureSemester" id="Y4Fall">
-                                    <div> Semester: Fall 2017</div>
-                                    <!-- courses-->
-                                    <div> CS 473</div>
-                                    <div> CS 423</div>
-                                    <div> CS 499</div>
-                                    <div> CS 461</div>
-                                    <div>
-                                        <p>
-                                        </P>
+                        <div class="YearColumn" id="Y4">
+                            <div class="YearHeader"> Year Four</div>
+                            <div class="SemestersHolder">
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y4Fall">
                                     </div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
-                                    </div>
-                                    <div> Credit Hours: 14</div>
-                                    <div> Predicted GPA: 3.33 </div>
                                 </div>
-                                <div class="gridCellHolder futureSemester" id="Y4Spring">
-                                    <div> Semester: Spring 2018</div>
-                                    <!-- courses-->
-                                    <div> CS 499</div>
-                                    <div> CS 438</div>
-                                    <div> CS 431</div>
-                                    <div> CS 460</div>
-                                    <div>
-                                        <p></p>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y4Winter">
                                     </div>
-                                    <div>
-                                        <p><b></b>
-                                        </p>
+                                </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y4Spring">
                                     </div>
-                                    <div> Credit Hours: 14</div>
-                                    <div> Predicted GPA: 3.75 </div>
                                 </div>
-                                <div class="gridCellHolder futureSemester hiddenClass" id="Y4Summer">
-                                    <div> Semester: Summer 2018</div>
-                                    <div> Credit Hours: </div>
-                                    <div> Predicted GPA: </div>
-                                </div>
-                                <div class="gridCellHolder" id="Y4plus">
-                                    <div> + </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y4Summer">
+                                    </div>
                                 </div>
                             </div>
-                            <!--<div class="YearTitle" id="Y4Plus"><i class="fa fa-plus"></i> </div>-->
+
+                        </div>
+                        <div class="YearColumn hidden" id="Y5">
+                            <div class="YearHeader"> Year Five</div>
+                            <div class="SemestersHolder">
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y5Fall">
+                                    </div>
+                                </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y5Winter">
+                                    </div>
+                                </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y5Spring">
+                                    </div>
+                                </div>
+                                <div class="SemesterCellHolder">
+                                    <div class="SemesterCell" id="Y5Summer">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
         <div class="slide" id="AcademicProgress">
             <div class="displayHolder">
                 <div class="flexboxContainer">
-                    <div class="temp">
-                        Academic Progress.
+                    <div id="AcademicProgressOverviewHolder">
+                        <div class="AcademicProgressRequirement">
+                            <div class="AcademicProgressRequirementDescription">
+                                <p>Basic Courses Requirement</p>
+                                <p id="BCR" class="Incomplete">Incomplete - <i class="fa fa-times-circle-o"></i> </p>
+                                <p>Take CS 125, CS 173, CS 233, CS 241 and CS 242.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="AcademicProgressRequirement">
+                            <div class="AcademicProgressRequirementDescription">
+                                <p> Tech Elective Course Requirement</p>
+                                <p id="TCR" class="IncompleteRequirement">Incomplete - <i class="fa fa-times-circle-o"></i>
+                                </p>
+                                <p> Take 8 tech electives.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,14 +188,14 @@
         <div class="slide" id="GPAPage">
             <div class="displayHolder">
                 <div class="flexboxContainer">
-                    <div class="temp">
-                        GPA Page.
+                    <div class="GPAHolder">
+                        <div class="GPAOptions"></div>
+                        <div class="GPAGraphHolder"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-    </div>
     </div>
 
     <div id="focusRemover">

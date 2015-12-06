@@ -7,6 +7,7 @@ function Course() {
     this.course_type = "Normal";
     this.professor_name = "";
     this.notes = "";
+    this.isTechElective = false;
 }
 
 Course.prototype.setCourseTitle = function (givenTitle) {

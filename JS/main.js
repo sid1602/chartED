@@ -4,29 +4,28 @@ $(document).ready(function () {
     //  Set the scrollbar to be shown.
     $('#fullpage').fullpage({
         controlArrows: false,
-        paddingTop: $("#renderToolbar").height(),
-        fixedElements: "#renderToolbar"
+        paddingTop: $("#optionsToolbar").height(),
+        fixedElements: "#optionsToolbar"
     });
     $(document).keydown(keyboardInputHandler);
 });
 
 $(window).load(function () {
-
+    registerToolbarClickHandlers();
     semesterSystem = new SemesterSystem();
     semesterSystem.setUpSemesterSystem();
+    semesterSystem.setUpAcademicProgressRequirements();
 });
 
 function keyboardInputHandler(event) {
     if (event.which == 65) {
         $("#Y1Summer").removeClass("hiddenClass");
         $("#Y1plus").addClass("hiddenClass");
-        //  displaySemsterBlock(true);
     }
 
     if (event.which == 83) {
         $("#Y1Summer").addClass("hiddenClass");
         $("#Y1plus").removeClass("hiddenClass");
-        //  displaySemsterBlock(false);
     }
 
 }
@@ -69,3 +68,22 @@ function addFifthYear() {
 function removeFifthYear() {
     $("#Y5").removeClass("hiddenClass");
 }
+
+function registerToolbarClickHandlers() {
+    $("#CoursesButton").click(function () {
+        $.fn.fullpage.moveTo(0, 0);
+    });
+
+    $("#AcademicProgressButton").click(function () {
+        $.fn.fullpage.moveTo(0, 1);
+    });
+
+    $("#GPAButton").click(function () {
+        $.fn.fullpage.moveTo(0, 2);
+    });
+
+    setUpMenuHandler();
+
+}
+
+function setUpMenuHandler() {};
