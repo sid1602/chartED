@@ -38,7 +38,7 @@ Course.prototype.notes = function (givenNotes) {
 Course.prototype.fillInCourseInfo = function () {
 
     this.associatedCell.html("<div> " + this.course_title + " </div>");
-    this.associatedCell.html(this.associatedCell.html() + "<div> Credit Hours : " + this.default_credit_hours + " </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Credit Hours : " + this.user_course_hours + " </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Grade : " + this.user_grade + "  </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Professor : " + this.professor_name + "  </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Course Type : " + this.course_type + "  </div>");

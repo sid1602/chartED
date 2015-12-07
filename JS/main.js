@@ -1,4 +1,5 @@
 var semesterSystem = null;
+var temp_CourseSys = null;
 $(document).ready(function () {
     // Set up the fullpage.js
     //  Set the scrollbar to be shown.
@@ -23,14 +24,26 @@ function GotoSemster(clicked_id) {
     temp_Sem = semesterSystem.semesters[temp_id];
     $('#DummyDiv').removeClass("hiddenClass");
 
-    var temp_CourseSys = new CourseSystem(temp_Sem.courseList);
+    temp_CourseSys = new CourseSystem(temp_Sem.courseList);
     temp_CourseSys.setUpCourseSystem();
-
 }
 
 function closeButton() {
     $('#DummyDiv').addClass('hiddenClass');
 }
+
+function GotoCourseEdit(clicked_id) {
+    $('#CourseEdit').removeClass('hiddenClass');
+    $('#CourseEditWrapper').removeClass('hiddenClass');
+    var temp_cid = temp_CourseSys.getCourseArrayIDFromGivenID(clicked_id);
+    temp_CourseSys.populateCourseEdit(temp_cid);
+}
+
+function doneButton() {
+    $('#CourseEdit').addClass('hiddenClass');
+    $('#CourseEditWrapper').addClass('hiddenClass');
+}
+
 
 function displayFocusRemover(toggle) {
     console.log("Focus Toggle.");

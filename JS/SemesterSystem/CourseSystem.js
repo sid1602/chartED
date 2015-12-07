@@ -5,8 +5,12 @@ function CourseSystem(courseList) {
     var newCourse = null;
 
     for (var i = 0; i < courseList.length; i++) {
-        this.courses.push(courseList[i]);
+        newCourse = courseList[i];
+        this.courses.push(newCourse);
+        this.courses[i].course_id = "Class"+i;
     };
+
+/*
 
     this.courses[0].course_id = "Class1";
     this.courses[1].course_id = "Class2";
@@ -15,25 +19,25 @@ function CourseSystem(courseList) {
     this.courses[4].course_id = "Class5";
     this.courses[5].course_id = "Class6";
 
-/*
-    newCourse = new Course();
+    newCourse = courseList[0];
     this.courses.push(newCourse);
 
-    newCourse = new Course();
+    newCourse = courseList[1];
     this.courses.push(newCourse);
 
-    newCourse = new Course();
+    newCourse = courseList[2];
     this.courses.push(newCourse);
 
-    newCourse = new Course();
+    newCourse = courseList[3];
     this.courses.push(newCourse);
 
-    newCourse = new Course();
+    newCourse = courseList[4];
     this.courses.push(newCourse);
 
-    newCourse = new Course();
+    newCourse = courseList[5];
     this.courses.push(newCourse);
 */
+
     console.log(this.courses);
 }
 
@@ -42,6 +46,7 @@ CourseSystem.prototype.setUpCourseSystem = function () {
     for (var i = 0; i < this.courses.length; i++) {
         this.courses[i].associatedCell = $("#" + this.courses[i].course_id);
     }
+    this.fillInCourseSystem();
 };
 
 CourseSystem.prototype.fillInCourseSystem = function () {
@@ -66,13 +71,24 @@ CourseSystem.prototype.fillInCourse = function (givenCourseArrayPosition) {
     }
     this.fillInSemster(fromS);
     this.fillInSemster(toS);
-};
+};*/
 
-SemesterSystem.prototype.getSemesterArrayIDFromGivenID = function (semesterID) {
+CourseSystem.prototype.getCourseArrayIDFromGivenID = function (courseID) {
 
-    for (var i = 0; i < this.semesters.length; i++) {
-        if (this.semesters[i].givenID == semesterID) {
+    for (var i = 0; i < this.courses.length; i++) {
+        if (this.courses[i].givenID == courseID) {
             return i;
         }
     }
-};*/
+};
+
+CourseSystem.prototype.populateCourseEdit = function (courselist_id) {
+
+    var editcourse = courses[courselist_id];
+
+    this.associatedCell.html("<div> " + editcourse.course_title + " </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Credit Hours : " + editcourse.default_credit_hours + " </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Grade : " + editcourse.user_grade + "  </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Professor : " + editcourse.professor_name + "  </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Course Type : " + editcourse.course_type + "  </div>");
+};

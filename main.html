@@ -51,53 +51,26 @@
                     <button onClick="closeButton()">
                         X
                     </button>
-                    <div class="CourseEdit hiddenClass" id="CourseEdit">
-                        <div class="Class1">
-                            Course Title:
+                    <div class="CourseEditWrapper hiddenClass" id="CourseEditWrapper">
+                        <div class="CourseEdit hiddenClass" id="CourseEdit">
+                            <div>
+                                <button onClick="doneButton()">Done</button>
+                            </div>
                         </div>
-                        <div class="Class1">
-                            Credit Hours:
-                        </div>
-                        <div class="Class1">
-                            Grade:
-                        </div>
-                        <div class="Class1">
-                            Course Type (Dropdown Menu):
-                            <select>
-                                <option value="TechElective">Tech Elective</option>
-                                <option value="Gened">Gen Ed</option>
-                                <option value="TechElective">Tech Elective</option>
-                            </select>
-                        </div>
-                        <div class="Class1">
-                            Notes:
-                        </div>
-                        <div class="Class1">
-                            Professor:
-                        </div>
-                        <div class="Class1">
-                            Checkbox 1:
-                        </div>
-                        <div class="Class1">
-                            Extra Stuff:
-                        </div>
-                        <div class="Class1">
-                            <button>Done</button>
-                        </div>
-                    </div>
+                    </div>    
                     <div class="displayHolder" id="BGBlur">
                         <div class="flexboxContainer">
                             <div id="SemsterOverviewHolder">
                                 <div class="gridColumn" id="Col1">
                                     <div class="gridColumnInner">
-                                        <div class="gridCellHolder futureSemester" id="Class1">
+                                        <div class="gridCellHolder futureSemester" id="Class0" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder hiddenClass" id="Class1plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class0plus">
                                             <div> + </div>
                                         </div>
-                                        <div class="gridCellHolder futureSemester" id="Class2">
+                                        <div class="gridCellHolder futureSemester" id="Class1" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder hiddenClass" id="Class2plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class1plus">
                                             <div> + </div>
                                         </div>
                                     </div>
@@ -105,14 +78,14 @@
                                 </div>
                                 <div class="gridColumn" id="Col2">
                                     <div class="gridColumnInner">
-                                        <div class="gridCellHolder futureSemester" id="Class3">
+                                        <div class="gridCellHolder futureSemester" id="Class2" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder hiddenClass" id="Class3plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class2plus">
                                             <div> + </div>
                                         </div>
-                                        <div class="gridCellHolder futureSemester" id="Class4">
+                                        <div class="gridCellHolder futureSemester" id="Class3" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder hiddenClass" id="Class4plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class3plus">
                                             <div> + </div>
                                         </div>
                                     </div>
@@ -120,14 +93,14 @@
                                 </div>
                                 <div class="gridColumn" id="Col3">
                                     <div class="gridColumnInner">
-                                        <div class="gridCellHolder futureSemester" id="Class5">
+                                        <div class="gridCellHolder futureSemester" id="Class4" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder hiddenClass" id="Class5plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class4plus">
                                             <div> + </div>
                                         </div>
-                                        <div class="gridCellHolder futureSemester hiddenClass" id="Class6">
+                                        <div class="gridCellHolder futureSemester hiddenClass" id="Class5" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder" id="Class6plus">
+                                        <div class="gridCellHolder" id="Class5plus">
                                             <div> + </div>
                                         </div>
                                     </div>
@@ -136,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
                 <div class="flexboxContainer">
                     <div id="SemsterOverviewHolder">
                         <div class="YearColumn" id="Y1">
@@ -286,7 +259,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <div id="focusRemover">
