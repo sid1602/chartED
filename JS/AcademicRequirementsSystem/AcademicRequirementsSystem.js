@@ -1,7 +1,8 @@
 function AcademicRequirementsSystem(semesterSystem) {
 
     this.semesterSystem = semesterSystem;
-    this.requirements1 = [];
+    this.requirements1 = ['CS 125', 'CS173','CS233','CS241','CS242'];
+    //this.requirements1 = ['Math 221'];
 }
 
 AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
@@ -11,7 +12,7 @@ AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
     for (var i = 0; i < this.semesterSystem.semesters.length; i++) {
         for (var j = 0; j < this.semesterSystem.semesters[i].courseList.length; j++) {
             for (var k = 0; k < this.requirements1.length; k++) {
-                if (this.semesterSystem.semesters[i].courseList[i].course_title == this.requirements1[k]) {
+                if (this.semesterSystem.semesters[i].courseList[j].course_title == this.requirements1[k]) {
                     fulfilledRequirements1.push(true);
                 }
             }
@@ -21,7 +22,7 @@ AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
     console.log(fulfilledRequirements1);
     console.log(this.requirements1);
 
-    if (fulfilledRequirements1.length == this.requirements1.length && this.requirements1.length == 0) {
+    if (fulfilledRequirements1.length == this.requirements1.length && this.requirements1.length != 0) {
         $("#BCR").html("Complete - <i class= \"fa fa-check\"></i>");
         $("#BCR").removeClass("IncompleteRequirement");
         $("#BCR").addClass("CompletedRequirement");

@@ -8,11 +8,13 @@ $(document).ready(function () {
         paddingTop: $("#optionsToolbar").height(),
         fixedElements: "#optionsToolbar"
     });
-    $(document).keydown(keyboardInputHandler);
+    //$(document).keydown(keyboardInputHandler);
 });
 
 $(window).load(function () {
     registerToolbarClickHandlers();
+    create_courses();
+    console.log(course_list);
     semesterSystem = new SemesterSystem();
     semesterSystem.setUpSemesterSystem();
     semesterSystem.setUpAcademicProgressRequirements();

@@ -17,19 +17,54 @@ Semster.prototype.computeCHGPA = function () {
     this.GPA = 0;
     for (var i = 0; i < this.courseList.length; i++) {
         this.CreditHours += this.courseList[i].user_course_hours;
-        this.GPA += this.courseList[i].user_grade;
+        //this.GPA += this.courseList[i].user_course_hours;
+        this.GPA += this.courseList[i].user_course_hours* GradeToGPA(this.courseList[i].user_grade);
     }
 
+    if(this.CreditHours != 0)
+        this.GPA = this.GPA/this.CreditHours;
+
+    this.GPA = Math.round(this.GPA * 100) / 100;
+    //this.GPA = 3.33;
 };
 
+function GradeToGPA(grade)
+{
+    var gpa_val = 0;
+
+    if(grade == 'A+')
+        gpa_val = 4.00;
+    else if(grade == 'A')
+        gpa_val = 4.00;
+    else if(grade == 'A-')
+        gpa_val = 3.67;
+    else if(grade == 'B+')
+        gpa_val = 3.33;
+    else if(grade == 'B')
+        gpa_val = 3.00;
+    else if(grade == 'B-')
+        gpa_val = 2.67;
+    else if(grade == 'C+')
+        gpa_val = 2.33;
+    else if(grade == 'C')
+        gpa_val = 2.00;
+    else if(grade == 'C-')
+        gpa_val = 1.67;
+    else if(grade == 'D+')
+        gpa_val = 1.33;
+    else if(grade == 'D')
+        gpa_val = 1.00;
+    else if(grade == 'D-')
+        gpa_val = 0.67;
+    else gpa_val = 0;
+
+    return gpa_val;
+
+}
 
 Semster.prototype.addCourse = function (givenCourse) {
     this.courseList.push(givenCourse);
-    console.log(givenCourse);
-    console.log(this.courseList);
     this.computeCHGPA();
-
-    console.log(this.GPA);
 };
 
 Semster.prototype.removeCourse = function (givenCourseName) {

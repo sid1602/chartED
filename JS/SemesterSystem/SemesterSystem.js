@@ -116,15 +116,36 @@ SemesterSystem.prototype.setUpSemesterSystem = function () {
     }
 
     // Course Example
-    var course = new Course();
-    course.course_title = "CS 101";
-    course.user_grade = 4;
-    course.user_course_hours = 3;
-    this.addCourseToSemester(course, "Y1Spring");
-    this.moveCourseBetweenSemesters("CS 101", "Y1Spring", "Y1Fall");
-    this.fillInSemesterSystem();
-
+    // var course = new Course();
+    // course.course_title = "CS 101";
+    // course.user_grade = 4;
+    // course.user_course_hours = 3;
+    // this.addCourseToSemester(course, "Y1Spring");
+    // this.moveCourseBetweenSemesters("CS 101", "Y1Spring", "Y1Fall");
+    //this.addCourseToSemesterFromCourseList("Math 231", "Y1Spring");
+    this.addCourseToSemesterFromCourseList("Math 221", "Y1Fall");
+    this.addCourseToSemesterFromCourseList("Phys 211", "Y1Fall");
 };
+
+
+SemesterSystem.prototype.addCourseToSemesterFromCourseList = function (givenCourseTitle, givenSemester) {
+    var course1 = new Course();
+
+    for (var i = 0; i < course_list.length; i++) {
+        if (course_list[i].course_title == givenCourseTitle) {
+            course1.course_title = course_list[i].course_title;
+            course1.user_course_hours = course_list[i].user_course_hours;
+            course1.user_grade = course_list[i].user_grade;
+            course1.professor_name = course_list[i].professor_name;
+            course1.isTechElective = course_list[i].isTechElective;
+            course1.average_grade = course_list[i].average_grade;
+            break;
+        }
+    }
+
+    this.addCourseToSemester(course1, givenSemester);
+    this.fillInSemesterSystem();
+}
 
 SemesterSystem.prototype.fillInSemesterSystem = function () {
     for (var i = 0; i < this.semesters.length; i++) {
@@ -134,7 +155,7 @@ SemesterSystem.prototype.fillInSemesterSystem = function () {
 
 SemesterSystem.prototype.fillInSemster = function (givenSemesterArrayPosition) {
 
-    console.log(this.semesters[givenSemesterArrayPosition].courseList);
+    //console.log(this.semesters[givenSemesterArrayPosition].courseList);
     this.semesters[givenSemesterArrayPosition].fillInSemster();
     this.semesters[givenSemesterArrayPosition].setSemsterStatus("Incomplete");
 };
@@ -144,12 +165,21 @@ SemesterSystem.prototype.setUpAcademicProgressRequirements = function () {
 
     this.aRPS = new AcademicRequirementsSystem(this);
     this.aRPS.updateAcademicRequirements();
+
+    //  
+    this.gpaSystem = null;
+
+    //
+    this.gpaSystem = new GPASystem(this);
+    this.gpaSystem.setUpArrays();
+    this.gpaSystem.updateSVG();
+
 };
 
 SemesterSystem.prototype.addCourseToSemester = function (givenCourse, givenSemesterGivenID) {
     var semesterID = this.getSemesterArrayIDFromGivenID(givenSemesterGivenID);
     this.semesters[semesterID].addCourse(givenCourse);
-    this.fillInSemster(semesterID);
+    this.fillInSemesterSystem();
 
 };
 
@@ -170,8 +200,7 @@ SemesterSystem.prototype.moveCourseBetweenSemesters = function (courseName, from
     if (removedCourse != null) {
         this.addCourseToSemester(removedCourse, toSemesterGivenID);
     }
-    this.fillInSemster(fromS);
-    this.fillInSemster(toS);
+    this.fillInSemesterSystem();
 };
 
 SemesterSystem.prototype.getSemesterArrayIDFromGivenID = function (semesterID) {

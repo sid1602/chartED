@@ -33,4 +33,18 @@
     max-height: 100%;
     box-sizing: border-box;
     display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.svgMiddle {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.legendXAxis {
+    font-family: Lekton;
+    font-size: 15px;
+    color: black;
 }
