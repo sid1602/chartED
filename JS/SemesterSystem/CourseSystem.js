@@ -84,11 +84,20 @@ CourseSystem.prototype.getCourseArrayIDFromGivenID = function (courseID) {
 
 CourseSystem.prototype.populateCourseEdit = function (courselist_id) {
 
-    var editcourse = courses[courselist_id];
+    //var editcourse = courses[courselist_id];
+    var select = document.getElementById("Select_Course");
 
-    this.associatedCell.html("<div> " + editcourse.course_title + " </div>");
+    for(var i=0; i<course_list.length; i++)
+    {
+        var opt = course_list[i].course_title;
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.appendChild(el);
+    }
+    /*this.associatedCell.html("<div> " + editcourse.course_title + " </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Credit Hours : " + editcourse.default_credit_hours + " </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Grade : " + editcourse.user_grade + "  </div>");
     this.associatedCell.html(this.associatedCell.html() + "<div> Professor : " + editcourse.professor_name + "  </div>");
-    this.associatedCell.html(this.associatedCell.html() + "<div> Course Type : " + editcourse.course_type + "  </div>");
+    this.associatedCell.html(this.associatedCell.html() + "<div> Course Type : " + editcourse.course_type + "  </div>");*/
 };

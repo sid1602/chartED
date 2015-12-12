@@ -5,6 +5,7 @@ function Course() {
     this.default_credit_hours = 0;
     this.user_course_hours = 0;
     this.user_grade = 0;
+    this.taken = 0;
     this.course_type = "Normal";
     this.professor_name = "";
     this.notes = "";
