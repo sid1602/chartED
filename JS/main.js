@@ -34,8 +34,8 @@ function GotoSemster(clicked_id) {
 
 function closeButton() {
     //Step 4 - Clear the divs
-        for (var i = 0; i < 6; i++) {
-        var course_id = "Class"+i;
+    for (var i = 0; i < 6; i++) {
+        var course_id = "Class" + i;
         document.getElementById(course_id).innerHTML = "";
     };
 
@@ -57,20 +57,16 @@ function doneButton() {
     var selected_grade = document.getElementById("Select_Grade").value;
     //Step 2 - Send value to function called addCourseToSemesterFromCourseList w/ values of current Semester and dropdown menu values
     var flag = 0;
-    for(var i=0; i<semesterSystem.semesters[sem_id].courseList.length; i++)
-    {
-        if(semesterSystem.semesters[sem_id].courseList[i].course_title==selected_course)
-        {
+    for (var i = 0; i < semesterSystem.semesters[sem_id].courseList.length; i++) {
+        if (semesterSystem.semesters[sem_id].courseList[i].course_title == selected_course) {
             flag = 1;
         }
     }
-    if(flag!=1)
-        semesterSystem.addCourseToSemesterFromCourseList(selected_course, curr_sem);        
+    if (flag != 1)
+        semesterSystem.addCourseToSemesterFromCourseList(selected_course, curr_sem);
     //Step 3 - Go into the course that you just added and add the user grade
-    for(var i=0; i<semesterSystem.semesters[sem_id].courseList.length; i++)
-    {
-        if(semesterSystem.semesters[sem_id].courseList[i].course_title==selected_course)
-        {
+    for (var i = 0; i < semesterSystem.semesters[sem_id].courseList.length; i++) {
+        if (semesterSystem.semesters[sem_id].courseList[i].course_title == selected_course) {
             semesterSystem.semesters[sem_id].courseList[i].user_grade = selected_grade;
         }
     }
@@ -130,7 +126,11 @@ function registerToolbarClickHandlers() {
     });
 
     $("#GPAButton").click(function () {
+        console.log("Reached");
+        semesterSystem.gpaSystem.setUpArrays();
+        semesterSystem.gpaSystem.updateSVG();
         $.fn.fullpage.moveTo(0, 2);
+
     });
 
     setUpMenuHandler();
