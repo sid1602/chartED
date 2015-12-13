@@ -7,38 +7,37 @@ function CourseSystem(courseList) {
     for (var i = 0; i < courseList.length; i++) {
         newCourse = courseList[i];
         this.courses.push(newCourse);
-        this.courses[i].course_id = "Class"+i;
+        this.courses[i].course_id = "Class" + i;
     };
 
-/*
+    /*
 
-    this.courses[0].course_id = "Class1";
-    this.courses[1].course_id = "Class2";
-    this.courses[2].course_id = "Class3";
-    this.courses[3].course_id = "Class4";
-    this.courses[4].course_id = "Class5";
-    this.courses[5].course_id = "Class6";
+        this.courses[0].course_id = "Class1";
+        this.courses[1].course_id = "Class2";
+        this.courses[2].course_id = "Class3";
+        this.courses[3].course_id = "Class4";
+        this.courses[4].course_id = "Class5";
+        this.courses[5].course_id = "Class6";
 
-    newCourse = courseList[0];
-    this.courses.push(newCourse);
+        newCourse = courseList[0];
+        this.courses.push(newCourse);
 
-    newCourse = courseList[1];
-    this.courses.push(newCourse);
+        newCourse = courseList[1];
+        this.courses.push(newCourse);
 
-    newCourse = courseList[2];
-    this.courses.push(newCourse);
+        newCourse = courseList[2];
+        this.courses.push(newCourse);
 
-    newCourse = courseList[3];
-    this.courses.push(newCourse);
+        newCourse = courseList[3];
+        this.courses.push(newCourse);
 
-    newCourse = courseList[4];
-    this.courses.push(newCourse);
+        newCourse = courseList[4];
+        this.courses.push(newCourse);
 
-    newCourse = courseList[5];
-    this.courses.push(newCourse);
-*/
+        newCourse = courseList[5];
+        this.courses.push(newCourse);
+    */
 
-    console.log(this.courses);
 }
 
 CourseSystem.prototype.setUpCourseSystem = function () {
@@ -87,8 +86,7 @@ CourseSystem.prototype.populateCourseEdit = function (courselist_id) {
     //var editcourse = courses[courselist_id];
     var select = document.getElementById("Select_Course");
 
-    for(var i=0; i<course_list.length; i++)
-    {
+    for (var i = 0; i < course_list.length; i++) {
         var opt = course_list[i].course_title;
         var el = document.createElement("option");
         el.textContent = opt;

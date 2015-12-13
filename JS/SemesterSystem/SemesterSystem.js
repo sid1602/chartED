@@ -8,121 +8,121 @@ function SemesterSystem() {
     newSemester = new Semster();
     newSemester.name = "Year 1 - Fall Semester";
     newSemester.givenID = "Y1Fall";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 1 - Winter Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y1Winter";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 1 - Spring Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y1Spring";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 1 - Summer Semester";
     newSemester.givenID = "Y1Summer";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 2 - Fall Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y2Fall";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 2 - Winter Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y2Winter";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 2 - Spring Semester";
     newSemester.givenID = "Y2Spring";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 2 - Summer Semester";
     newSemester.givenID = "Y2Summer";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 3 - Fall Semester";
     newSemester.givenID = "Y3Fall";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 3 - Winter Semester";
     newSemester.givenID = "Y3Winter";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 3 - Spring Semester";
     newSemester.givenID = "Y3Spring";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.name = "Year 3 - Summer Semester";
     newSemester.givenID = "Y3Summer";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 4 - Fall Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y4Fall";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 4 - Winter Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y4Winter";
     this.semesters.push(newSemester);
 
 
     newSemester = new Semster();
     newSemester.name = "Year 4 - Spring Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y4Spring";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 4 - Summer Semester";
     newSemester.givenID = "Y4Summer";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 5 - Fall Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y5Fall";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 4 - Winter Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y5Winter";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 5 - Spring Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y5Spring";
     this.semesters.push(newSemester);
 
     newSemester = new Semster();
     newSemester.name = "Year 5 - Summer Semester";
-    newSemester.average_GPA = Math.random() * 4.0;
+    newSemester.average_GPA = Math.random() * 0.0;
     newSemester.givenID = "Y5Summer";
     this.semesters.push(newSemester);
 
@@ -175,7 +175,6 @@ SemesterSystem.prototype.fillInSemesterSystem = function () {
 
 SemesterSystem.prototype.fillInSemster = function (givenSemesterArrayPosition) {
 
-    //console.log(this.semesters[givenSemesterArrayPosition].courseList);
     this.semesters[givenSemesterArrayPosition].fillInSemster();
     this.semesters[givenSemesterArrayPosition].setSemsterStatus("Incomplete");
 };

@@ -36,15 +36,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .svgMiddle {
+    margin-top: 0;
     margin-right: auto;
     margin-left: auto;
 }
 
 .legendXAxis {
     font-family: Lekton;
-    font-size: 15px;
+    font-size: 13px;
     color: black;
+}
+
+.legendYAxis {
+    font-family: Lekton;
+    font-size: 10px;
+    color: black;
+}
+
+.legend {
+    margin-top: 5%;
+    text-decoration: underline;
+    font-size: 15px;
 }
