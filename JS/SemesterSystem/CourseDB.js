@@ -30,6 +30,26 @@ function create_courses()
     course1.average_grade = 'B';
     course_list.push(course1);
 
+    var course1 = new Course();
+    course1.course_title = "CS 233";
+    course1.user_course_hours = 3;
+    course1.user_grade = 'B+';
+    course1.taken = 0;
+    course1.professor_name = "Craig Zilles";
+    course1.isTechElective = false;
+    course1.average_grade = 'B';
+    course_list.push(course1);
+
+    var course1 = new Course();
+    course1.course_title = "CS 242";
+    course1.user_course_hours = 3;
+    course1.user_grade = 'B+';
+    course1.taken = 0;
+    course1.professor_name = "Michael Woodley";
+    course1.isTechElective = false;
+    course1.average_grade = 'B-';
+    course_list.push(course1);
+
 	var course1 = new Course();
     course1.course_title = "Math 231";
     course1.user_course_hours = 3;
@@ -130,12 +150,32 @@ function create_courses()
     course1.average_grade = 'B';
     course_list.push(course1);
 
+    var course1 = new Course();
+    course1.course_title = "CS 173";
+    course1.user_course_hours = 1;
+    course1.user_grade = 'B';
+    course1.taken = 0;
+    course1.professor_name = "Margaret Fleck";
+    course1.isTechElective = false;
+    course1.average_grade = 'B+';
+    course_list.push(course1);
+
+    var course1 = new Course();
+    course1.course_title = "CS 241";
+    course1.user_course_hours = 1;
+    course1.user_grade = 'B';
+    course1.taken = 0;
+    course1.professor_name = "Lawrence Angrave";
+    course1.isTechElective = false;
+    course1.average_grade = 'B+';
+    course_list.push(course1);
+
 	var course1 = new Course();
     course1.course_title = "CS 431";
     course1.user_course_hours = 3;
     course1.user_grade = 'B+';
     course1.taken = 0;
-    course1.professor_name = "Sha, L";
+    course1.professor_name = "Lui Sha";
     course1.isTechElective = true;
     course1.average_grade = 'B-';
     course_list.push(course1);
@@ -165,7 +205,7 @@ function create_courses()
     course1.user_course_hours = 3;
     course1.user_grade = 'A';
     course1.taken = 0;
-    course1.professor_name = "Bailey, M";
+    course1.professor_name = "Michael Bailey";
     course1.isTechElective = true;
     course1.average_grade = 'B+';
     course_list.push(course1);
@@ -175,7 +215,7 @@ function create_courses()
     course1.user_course_hours = 3;
     course1.user_grade = 'A-';
     course1.taken = 0;
-    course1.professor_name = "Wai Tat Fu";
+    course1.professor_name = "Wai-Tat Fu";
     course1.isTechElective = true;
     course1.average_grade = 'B+';
     course_list.push(course1);
@@ -185,7 +225,7 @@ function create_courses()
     course1.user_course_hours = 3;
     course1.user_grade = 'B+';
     course1.taken = 0;
-    course1.professor_name = "Vaidya, N";
+    course1.professor_name = "Nitin Vaidya";
     course1.isTechElective = true;
     course1.average_grade = 'B+';
     course_list.push(course1);

@@ -51,7 +51,7 @@
         <div class="slide" id="SemesterOverview">
             <div class="displayHolder">
                 <div class="SemesterX hiddenClass" id="DummyDiv">
-                    <button onClick="closeButton()">
+                    <button class="doneButton" id="XButton" onClick="closeButton()">
                         X
                     </button>
                     <div class="CourseEditWrapper hiddenClass" id="CourseEditWrapper">
@@ -74,7 +74,7 @@
                                     <option value="D-">D-</option>
                                     <option value="F">F</option>
                                 </select>
-                                <button onClick="doneButton()">Done</button>
+                                <button class="doneButton" onClick="doneButton()">Done</button>
                             </div>
                         </div>
                     </div>
@@ -118,9 +118,9 @@
                                         <div class="gridCellHolder hiddenClass" id="Class4plus">
                                             <div> + </div>
                                         </div>
-                                        <div class="gridCellHolder futureSemester hiddenClass" id="Class5" onClick="GotoCourseEdit(this.id)">
+                                        <div class="gridCellHolder futureSemester" id="Class5" onClick="GotoCourseEdit(this.id)">
                                         </div>
-                                        <div class="gridCellHolder" id="Class5plus">
+                                        <div class="gridCellHolder hiddenClass" id="Class5plus">
                                             <div> + </div>
                                         </div>
                                     </div>

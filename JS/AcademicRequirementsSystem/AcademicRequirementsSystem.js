@@ -1,8 +1,8 @@
 function AcademicRequirementsSystem(semesterSystem) {
 
     this.semesterSystem = semesterSystem;
-    this.requirements1 = ['CS 125', 'CS173','CS233','CS241','CS242'];
-    //this.requirements1 = ['Math 221'];
+    this.requirements1 = ['CS 125', 'CS 173','CS 233','CS 241','CS 242'];
+    //this.requirements1 = ['Math 221', 'CS 125'];
 }
 
 AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
@@ -53,5 +53,4 @@ AcademicRequirementsSystem.prototype.updateAcademicRequirements = function () {
         $("#TCR").removeClass("CompletedRequirement");
         $("#TCR").addClass("IncompleteRequirement");
     }
-
 };

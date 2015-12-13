@@ -47,6 +47,7 @@ function GotoCourseEdit(clicked_id) {
     $('#CourseEditWrapper').removeClass('hiddenClass');
     var temp_cid = temp_CourseSys.getCourseArrayIDFromGivenID(clicked_id);
     temp_CourseSys.populateCourseEdit(temp_cid);
+    $('#XButton').addClass('hiddenClass');
 }
 
 function doneButton() {
@@ -73,7 +74,9 @@ function doneButton() {
     //Step 4 - Hide the stuff
     $('#CourseEdit').addClass('hiddenClass');
     $('#CourseEditWrapper').addClass('hiddenClass');
+    $('#XButton').removeClass('hiddenClass');
     GotoSemster(curr_sem);
+    semesterSystem.aRPS.updateAcademicRequirements();
 }
 
 
