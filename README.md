@@ -1,0 +1,2 @@
+# chartED
+Website that allows UIUC students to view an interactive and comprehensive version of their academic progress. The user enters their data, and they will get an interactive graph showing their GPA as well as a course map to see classes taken as well as recommended classes for future semesters. Currently only serves ECE/CS students, but we are hoping to get approval from the University to expand this to all majors.
